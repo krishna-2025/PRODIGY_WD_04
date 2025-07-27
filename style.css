@@ -1,0 +1,249 @@
+
+:root {
+  --primary-color: #00b3ff;
+  --bg-gradient: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  --bg-light: #ffffff;
+  --text-dark: #0f172a;
+  --text-light: #becbd8;
+  --section-bg: #1e293b;
+  --glow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+/* Theme Base */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+body.light-mode {
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(223, 223, 16);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 10%;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+#typing-text {
+  color:rgb(248, 143, 6);
+   font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid orange;
+  vertical-align: bottom;
+  animation: typing-cursor 1s steps(1) infinite;
+}
+
+#typing-text::after {
+  content: '|';
+  color: rgb(248, 143, 6);
+  animation: blink-cursor 0.8s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.btn.light {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow);
+}
+
+.hero-img img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+  box-shadow: var(--glow);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Section General */
+.section {
+  padding: 3rem 10%;
+}
+
+/* Unique heading colors */
+#about h2 { color: #8cdd2f; text-align: center;}
+#skills h2 { color: #08a3eb; text-align: center;}
+#experience h2 { color: #a066ff; text-align: center;}
+#projects h2 { color: #00ffa2; text-align: center;}
+#contact h2 { color: #f29950; text-align: center;}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--text-dark);
+  color: var(--text-light);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: var(--glow);
+  transition: transform 0.3s ease;
+}
+body.light-mode .project-card {
+  background: #f4f4f4;
+  color: #000;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.8);
+}
+
+/* Form */
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #28354b;
+  color: white;
+  margin-bottom: 1rem;
+}
+body.light-mode input, 
+body.light-mode textarea {
+  background: #fff;
+  color: #000;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+    display: block;
+  margin: 1rem auto;
+}
+
+button[type="submit"]:hover {
+  box-shadow: var(--glow);
+  transform: translateY(-3px);
+}
+
+.response-msg {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 10%;
+  color: #999;
+  background: rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajay Gupta | Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>  
+  <header>
+    <nav class="navbar">
+      <div class="logo">AJAY GUPTA</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle">🌙</button></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div class="hero-text fade-in">
+        <h3>Hello ,</h3>
+        <h1>I'm <span class="highlight">Ajay</span> Gupta</h1>
+        <h2>And I'm <span id="typing-text"></span></h2>
+        <p>A passionate Computer Science student with a strong interest in web development.<br> During my internship at Prodigy InfoTech, I developed a personal portfolio to <br> showcase my skills and projects. I enjoy building clean, responsive websites using <br>HTML, CSS, and JavaScript, and I’m always eager to learn, grow, and take on new<br> challenges. I also enjoy collaborating with others to bring ideas to life.<br><br>
+
+Thank you for visiting my portfolio — I’m excited to turn ideas into reality with you..</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn light">Hire Me</a>
+          <a href="#experience" class="btn dark">Experience</a>
+        </div>
+      </div>
+      <div class="hero-img fade-in">
+        <img src="profile.jpg" alt="Ajay Gupta" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section fade-in">
+      <h2>About Me</h2>
+      <p>I'm Ajay Gupta, a passionate and dedicated web developer and currently pursuing my Bsc. in Computer Science. I specialize in building scalable and user-friendly web applications with clean and efficient code. I am a versatile and creative designer with expertise in graphic, app, and website design. With a strong eye for aesthetics and a keen understanding of user experience, I create visually stunning and engaging designs that deliver results. I have experience working on projects ranging from branding and marketing campaigns to user interface design, brand logos and app interface. I’m always excited to explore new challenges and collaborate on impactful web solutions.</p>
+    </section>
+
+    <section id="skills" class="section fade-in">
+      <h2>Skills</h2>
+      <p>
+        <i class="fas fa-code"></i> I have hands-on experience with frontend technologies like <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript</strong> to build responsive and interactive websites.  
+        <br><br>
+        <i class="fab fa-python"></i> I also work with <strong>Python</strong> for scripting and backend logic. For databases, I’ve used both <strong>MongoDB</strong> (NoSQL) and <strong>MySQL</strong> (SQL) to manage and store data effectively.  
+        <br><br>
+        <i class="fab fa-git-alt"></i> I use <strong>Git</strong> and <strong>GitHub</strong> for version control, and I can build and integrate <strong>REST APIs</strong> in full-stack projects.  
+        <br><br>
+        <i class="fas fa-laptop-code"></i> Design-wise, I focus on <strong>responsive design</strong> and <strong>UI/UX</strong> principles to make sure websites and apps look great and work smoothly across all devices.
+      </p>
+    </section>
+
+    <section id="experience" class="section fade-in">
+      <h2>Experience</h2>
+      <p>
+        <i class="fas fa-laptop-code"></i> <strong>Web Development Intern – Prodigy Infotech</strong><br>
+        Built responsive websites using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>React</strong>. Focused on clean UI and smooth user experience.
+      </p>
+      <p>
+        <i class="fas fa-briefcase"></i> <strong>Freelance Developer</strong><br>
+        Designed and developed portfolio sites, dashboards, and integrated <strong>REST APIs</strong> using full-stack tools. Delivered custom solutions for clients.
+      </p>
+    </section>
+
+    <section id="projects" class="section fade-in">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>HelpNet</h3>
+          <p>A collaborative platform where students can ask questions, get academic help, and connect with peers.</p>
+        </div>
+        <div class="project-card">
+          <h3>Digital Will Asset</h3>
+          <p>A secure digital locker to store and manage important documents and digital assets safely.</p>
+        </div>
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>A simple web app that shows real-time weather, temperature, and location-based weather details.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section fade-in">
+      <h2>Contact</h2>
+      <form onsubmit="return handleContact(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn light">Send Message</button>
+        <p id="responseMsg" class="response-msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ajay Gupta. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
